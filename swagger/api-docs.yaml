@@ -18,3 +18,9 @@ schemes:
 
 #All the end-points for the API 
 paths:
+  /HelloWorld/:
+    get:
+      operationId: api.helloworld
+      responses:
+        '200':
+          description: "Hello World"
