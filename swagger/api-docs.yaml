@@ -1,0 +1,20 @@
+#Defines Swagger version
+swagger: "2.0"
+#Information displayed on the docs page
+info:
+  title: "Maze Game FYP -  High Score Leaderboard"
+  version: "1.0"
+  #Necessary for copyright
+  license: 
+    name: MIT
+
+#The base path needed before all routes
+basePath: /v1.0
+
+
+schemes:
+ - http
+
+
+#All the end-points for the API 
+paths:
