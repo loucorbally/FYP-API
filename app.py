@@ -1,7 +1,7 @@
+# -*- coding: utf-8 -*-
 import connexion
 
 if __name__ == '__main__':
-    
     #Set up Connexion with swagger file
     application = connexion.App(__name__, specification_dir='swagger/')
 

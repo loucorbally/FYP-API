@@ -20,7 +20,7 @@ schemes:
 paths:
   /HelloWorld/:
     get:
-      operationId: api.helloworld
+      operationId: api.HelloWorld
       responses:
         '200':
           description: "Hello World"
