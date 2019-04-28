@@ -26,5 +26,5 @@ FlaskInjector(app=application.app, modules=[configure])
 if __name__ == '__main__':
     
   
-    #Start the flask server on either a predefined port from the host machine or 2025
+    #Start the flask server on either on port 2025
     application.run(port=int(os.environ.get('PORT', 2025)))

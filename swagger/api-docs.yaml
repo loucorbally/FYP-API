@@ -8,8 +8,7 @@ info:
   license: 
     name: MIT
 
-#The base path needed before all routes
-basePath: /v1.0
+
 
 
 schemes:
@@ -24,3 +23,41 @@ paths:
       responses:
         '200':
           description: "Hello World"
+
+  #Routes for top user & score        
+  /todays-highscore/:
+    get:
+      operationId: api.scores.getTodaysHighScore
+      responses:
+        200:
+          description: 'The top user and their score'   
+
+  #Routes for setting the score 
+  /savescore/:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: productPayload
+        description: Device ID and score 
+        schema:
+          $ref: '#/definitions/Score'
+      operationId: api.scores.setPlayerScore
+      responses:
+        201:
+          description: Successfully added score to the leaderboard for today & all time.
+        400:
+          description: invalid input, object invalid
+
+
+definitions:
+  Score:
+    type: object
+    properties:
+      userid: { type: string }
+      score: { type: string }
+  
+  
