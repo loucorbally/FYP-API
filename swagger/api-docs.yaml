@@ -32,6 +32,13 @@ paths:
         200:
           description: 'The top user and their score'   
 
+  /leaderboard/:
+    get:
+      operationId: api.scores.getLeaderboard
+      responses:
+        '200':
+          description: 'List of high scorers'        
+
   #Routes for setting the score 
   /savescore/:
     post:

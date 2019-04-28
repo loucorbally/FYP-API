@@ -27,4 +27,4 @@ if __name__ == '__main__':
     
   
     #Start the flask server on either on port 2025
-    application.run(port=int(os.environ.get('PORT', 2025)))
+    application.run(server='tornado', port=int(os.environ.get('PORT', 2025)))
